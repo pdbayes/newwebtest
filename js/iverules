@@ -1,0 +1,924 @@
+{
+    "form": {
+        "page_rules": {},
+        "currentDateddmmyyyyhhmm": "07/07/2025 01:31 PM",
+        "is_advanced_field_rule": true,
+        "field_rules": [
+            {
+                "rule_id": "153211000000020269",
+                "logical_oper": "matchall",
+                "issubform_rule": false,
+                "rule_disp_name": "Rule 1",
+                "conditions": [
+                    {
+                        "logical_oper": "and",
+                        "conditions": [
+                            {
+                                "logical_oper": "and",
+                                "conditions": [
+                                    {
+                                        "field_link_name": "Radio",
+                                        "valtype": 1,
+                                        "comparison_oper": "EQUALS",
+                                        "value": "1",
+                                        "condition_id": "153211000000023498"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "actions": [
+                    {
+                        "field_link_name": "Section",
+                        "action_id": "153211000000023484",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Name1",
+                        "action_id": "153211000000023486",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Dropdown1",
+                        "action_id": "153211000000023488",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Section9",
+                        "action_id": "153211000000023490",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "SingleLine5",
+                        "action_id": "153211000000023492",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "MultiLine1",
+                        "action_id": "153211000000023494",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Dropdown1",
+                        "action_id": "153211000000023496",
+                        "page_title": "Page 1",
+                        "action": "setmandatory"
+                    }
+                ]
+            },
+            {
+                "rule_id": "153211000000020287",
+                "logical_oper": "matchall",
+                "issubform_rule": false,
+                "rule_disp_name": "Rule 2",
+                "conditions": [
+                    {
+                        "logical_oper": "and",
+                        "conditions": [
+                            {
+                                "logical_oper": "and",
+                                "conditions": [
+                                    {
+                                        "field_link_name": "Radio",
+                                        "valtype": 1,
+                                        "comparison_oper": "EQUALS",
+                                        "value": "2",
+                                        "condition_id": "153211000000023530"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "actions": [
+                    {
+                        "field_link_name": "Section",
+                        "action_id": "153211000000023502",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Name1",
+                        "action_id": "153211000000023504",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Dropdown1",
+                        "action_id": "153211000000023506",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Section9",
+                        "action_id": "153211000000023508",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "SingleLine5",
+                        "action_id": "153211000000023510",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "MultiLine1",
+                        "action_id": "153211000000023512",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Section8",
+                        "action_id": "153211000000023514",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Name2",
+                        "action_id": "153211000000023516",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Dropdown2",
+                        "action_id": "153211000000023518",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Section2",
+                        "action_id": "153211000000023520",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "SingleLine4",
+                        "action_id": "153211000000023522",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "MultiLine2",
+                        "action_id": "153211000000023524",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Dropdown1",
+                        "action_id": "153211000000023526",
+                        "page_title": "Page 1",
+                        "action": "setmandatory"
+                    },
+                    {
+                        "field_link_name": "Dropdown2",
+                        "action_id": "153211000000023528",
+                        "page_title": "Page 1",
+                        "action": "setmandatory"
+                    }
+                ]
+            },
+            {
+                "rule_id": "153211000000020317",
+                "logical_oper": "matchall",
+                "issubform_rule": false,
+                "rule_disp_name": "Rule 3",
+                "conditions": [
+                    {
+                        "logical_oper": "and",
+                        "conditions": [
+                            {
+                                "logical_oper": "and",
+                                "conditions": [
+                                    {
+                                        "field_link_name": "Radio",
+                                        "valtype": 1,
+                                        "comparison_oper": "EQUALS",
+                                        "value": "3",
+                                        "condition_id": "153211000000023578"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "actions": [
+                    {
+                        "field_link_name": "Section",
+                        "action_id": "153211000000023534",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Name1",
+                        "action_id": "153211000000023536",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Dropdown1",
+                        "action_id": "153211000000023538",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Section9",
+                        "action_id": "153211000000023540",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "SingleLine5",
+                        "action_id": "153211000000023542",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "MultiLine1",
+                        "action_id": "153211000000023544",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Section8",
+                        "action_id": "153211000000023546",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Name2",
+                        "action_id": "153211000000023548",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Dropdown2",
+                        "action_id": "153211000000023550",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Section2",
+                        "action_id": "153211000000023552",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "SingleLine4",
+                        "action_id": "153211000000023554",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "MultiLine2",
+                        "action_id": "153211000000023556",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Section7",
+                        "action_id": "153211000000023558",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Name3",
+                        "action_id": "153211000000023560",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Dropdown3",
+                        "action_id": "153211000000023562",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Section3",
+                        "action_id": "153211000000023564",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "SingleLine3",
+                        "action_id": "153211000000023566",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "MultiLine3",
+                        "action_id": "153211000000023568",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Name6",
+                        "action_id": "153211000000023570",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Dropdown1",
+                        "action_id": "153211000000023572",
+                        "page_title": "Page 1",
+                        "action": "setmandatory"
+                    },
+                    {
+                        "field_link_name": "Dropdown2",
+                        "action_id": "153211000000023574",
+                        "page_title": "Page 1",
+                        "action": "setmandatory"
+                    },
+                    {
+                        "field_link_name": "Dropdown3",
+                        "action_id": "153211000000023576",
+                        "page_title": "Page 1",
+                        "action": "setmandatory"
+                    }
+                ]
+            },
+            {
+                "rule_id": "153211000000020361",
+                "logical_oper": "matchall",
+                "issubform_rule": false,
+                "rule_disp_name": "Rule 4",
+                "conditions": [
+                    {
+                        "logical_oper": "and",
+                        "conditions": [
+                            {
+                                "logical_oper": "and",
+                                "conditions": [
+                                    {
+                                        "field_link_name": "Radio",
+                                        "valtype": 1,
+                                        "comparison_oper": "EQUALS",
+                                        "value": "4",
+                                        "condition_id": "153211000000023638"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "actions": [
+                    {
+                        "field_link_name": "Section",
+                        "action_id": "153211000000023582",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Name1",
+                        "action_id": "153211000000023584",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Dropdown1",
+                        "action_id": "153211000000023586",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Section9",
+                        "action_id": "153211000000023588",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "SingleLine5",
+                        "action_id": "153211000000023590",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "MultiLine1",
+                        "action_id": "153211000000023592",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Section8",
+                        "action_id": "153211000000023594",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Name2",
+                        "action_id": "153211000000023596",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Dropdown2",
+                        "action_id": "153211000000023598",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Section2",
+                        "action_id": "153211000000023600",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "SingleLine4",
+                        "action_id": "153211000000023602",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "MultiLine2",
+                        "action_id": "153211000000023604",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Section7",
+                        "action_id": "153211000000023606",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Name3",
+                        "action_id": "153211000000023608",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Dropdown3",
+                        "action_id": "153211000000023610",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Section3",
+                        "action_id": "153211000000023612",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "SingleLine3",
+                        "action_id": "153211000000023614",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "MultiLine3",
+                        "action_id": "153211000000023616",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Section1",
+                        "action_id": "153211000000023618",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Name6",
+                        "action_id": "153211000000023620",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Dropdown4",
+                        "action_id": "153211000000023622",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Section6",
+                        "action_id": "153211000000023624",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "SingleLine",
+                        "action_id": "153211000000023626",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "MultiLine4",
+                        "action_id": "153211000000023628",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Dropdown1",
+                        "action_id": "153211000000023630",
+                        "page_title": "Page 1",
+                        "action": "setmandatory"
+                    },
+                    {
+                        "field_link_name": "Dropdown2",
+                        "action_id": "153211000000023632",
+                        "page_title": "Page 1",
+                        "action": "setmandatory"
+                    },
+                    {
+                        "field_link_name": "Dropdown3",
+                        "action_id": "153211000000023634",
+                        "page_title": "Page 1",
+                        "action": "setmandatory"
+                    },
+                    {
+                        "field_link_name": "Dropdown4",
+                        "action_id": "153211000000023636",
+                        "page_title": "Page 1",
+                        "action": "setmandatory"
+                    }
+                ]
+            },
+            {
+                "rule_id": "153211000000020405",
+                "logical_oper": "matchall",
+                "issubform_rule": false,
+                "rule_disp_name": "Rule 5",
+                "conditions": [
+                    {
+                        "logical_oper": "and",
+                        "conditions": [
+                            {
+                                "logical_oper": "and",
+                                "conditions": [
+                                    {
+                                        "field_link_name": "Radio",
+                                        "valtype": 1,
+                                        "comparison_oper": "EQUALS",
+                                        "value": "5",
+                                        "condition_id": "153211000000023712"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "actions": [
+                    {
+                        "field_link_name": "Section",
+                        "action_id": "153211000000023642",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Name1",
+                        "action_id": "153211000000023644",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Dropdown1",
+                        "action_id": "153211000000023646",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Section9",
+                        "action_id": "153211000000023648",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "SingleLine5",
+                        "action_id": "153211000000023650",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "MultiLine1",
+                        "action_id": "153211000000023652",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Section8",
+                        "action_id": "153211000000023654",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Name2",
+                        "action_id": "153211000000023656",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Dropdown2",
+                        "action_id": "153211000000023658",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Section2",
+                        "action_id": "153211000000023660",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "SingleLine4",
+                        "action_id": "153211000000023662",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "MultiLine2",
+                        "action_id": "153211000000023664",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Section7",
+                        "action_id": "153211000000023666",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Name3",
+                        "action_id": "153211000000023668",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Dropdown3",
+                        "action_id": "153211000000023670",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Section3",
+                        "action_id": "153211000000023672",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "SingleLine3",
+                        "action_id": "153211000000023674",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "MultiLine3",
+                        "action_id": "153211000000023676",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Section1",
+                        "action_id": "153211000000023678",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Name6",
+                        "action_id": "153211000000023680",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Dropdown4",
+                        "action_id": "153211000000023682",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Section6",
+                        "action_id": "153211000000023684",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "SingleLine",
+                        "action_id": "153211000000023686",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "MultiLine4",
+                        "action_id": "153211000000023688",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Section5",
+                        "action_id": "153211000000023690",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Name4",
+                        "action_id": "153211000000023692",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Dropdown5",
+                        "action_id": "153211000000023694",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Section10",
+                        "action_id": "153211000000023696",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "SingleLine1",
+                        "action_id": "153211000000023698",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "MultiLine5",
+                        "action_id": "153211000000023700",
+                        "page_title": "Page 1",
+                        "action": "show"
+                    },
+                    {
+                        "field_link_name": "Dropdown1",
+                        "action_id": "153211000000023702",
+                        "page_title": "Page 1",
+                        "action": "setmandatory"
+                    },
+                    {
+                        "field_link_name": "Dropdown2",
+                        "action_id": "153211000000023704",
+                        "page_title": "Page 1",
+                        "action": "setmandatory"
+                    },
+                    {
+                        "field_link_name": "Dropdown3",
+                        "action_id": "153211000000023706",
+                        "page_title": "Page 1",
+                        "action": "setmandatory"
+                    },
+                    {
+                        "field_link_name": "Dropdown4",
+                        "action_id": "153211000000023708",
+                        "page_title": "Page 1",
+                        "action": "setmandatory"
+                    },
+                    {
+                        "field_link_name": "Dropdown5",
+                        "action_id": "153211000000023710",
+                        "page_title": "Page 1",
+                        "action": "setmandatory"
+                    }
+                ]
+            }
+        ],
+        "is_advanced_page_rule": false,
+        "is_field_rules_enabled": true,
+        "adv_field_rules": {
+            "isdlynd": false,
+            "adv_result_arr": {
+                "Section7": {
+                    "result": false,
+                    "count": 3
+                },
+                "Section8": {
+                    "result": false,
+                    "count": 4
+                },
+                "Section5": {
+                    "result": false,
+                    "count": 1
+                },
+                "Section6": {
+                    "result": false,
+                    "count": 2
+                },
+                "Section9": {
+                    "result": false,
+                    "count": 5
+                },
+                "Name3": {
+                    "result": false,
+                    "count": 3
+                },
+                "Name4": {
+                    "result": false,
+                    "count": 1
+                },
+                "Name6": {
+                    "result": false,
+                    "count": 3
+                },
+                "Section3": {
+                    "result": false,
+                    "count": 3
+                },
+                "MultiLine5": {
+                    "result": false,
+                    "count": 1
+                },
+                "SingleLine1": {
+                    "result": false,
+                    "count": 1
+                },
+                "Section1": {
+                    "result": false,
+                    "count": 2
+                },
+                "Section2": {
+                    "result": false,
+                    "count": 4
+                },
+                "SingleLine3": {
+                    "result": false,
+                    "count": 3
+                },
+                "MultiLine1": {
+                    "result": false,
+                    "count": 5
+                },
+                "SingleLine4": {
+                    "result": false,
+                    "count": 4
+                },
+                "SingleLine5": {
+                    "result": false,
+                    "count": 5
+                },
+                "MultiLine2": {
+                    "result": false,
+                    "count": 4
+                },
+                "Section10": {
+                    "result": false,
+                    "count": 1
+                },
+                "MultiLine3": {
+                    "result": false,
+                    "count": 3
+                },
+                "MultiLine4": {
+                    "result": false,
+                    "count": 2
+                },
+                "Name1": {
+                    "result": false,
+                    "count": 5
+                },
+                "Name2": {
+                    "result": false,
+                    "count": 4
+                },
+                "Section": {
+                    "result": false,
+                    "count": 5
+                },
+                "Dropdown4": {
+                    "result": false,
+                    "setmandatory_count": 2,
+                    "count": 2,
+                    "setmandatory_result": false
+                },
+                "Dropdown3": {
+                    "result": false,
+                    "setmandatory_count": 3,
+                    "count": 3,
+                    "setmandatory_result": false
+                },
+                "Dropdown2": {
+                    "result": false,
+                    "setmandatory_count": 4,
+                    "count": 4,
+                    "setmandatory_result": false
+                },
+                "Dropdown1": {
+                    "result": false,
+                    "setmandatory_count": 5,
+                    "count": 5,
+                    "setmandatory_result": false
+                },
+                "SingleLine": {
+                    "result": false,
+                    "count": 2
+                },
+                "Dropdown5": {
+                    "result": false,
+                    "setmandatory_count": 1,
+                    "count": 1,
+                    "setmandatory_result": false
+                }
+            },
+            "on_form_load_ruleorder": [
+                "153211000000020405",
+                "153211000000020361",
+                "153211000000020317",
+                "153211000000020287",
+                "153211000000020269"
+            ]
+        }
+    }
+}
