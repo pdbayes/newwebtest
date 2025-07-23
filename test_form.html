@@ -1,0 +1,146 @@
+<!-- filepath: guest-registration-app/test_form.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guest Registration Form Tests</title>
+    <script src="https://unpkg.com/mocha/mocha.js"></script>
+    <script src="https://unpkg.com/chai/chai.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body>
+    <div id="mocha"></div>
+    <iframe id="formFrame" src="form.html" style="width:100%;height:1200px;border:none;"></iframe>
+    <script>
+        mocha.setup('bdd');
+        const { expect } = chai;
+
+        function waitForFrameLoad(frame) {
+            return new Promise(resolve => {
+                frame.onload = () => resolve();
+            });
+        }
+
+        describe('Guest Registration Form', function() {
+            let frame, doc, win;
+
+            before(async function() {
+                frame = document.getElementById('formFrame');
+                await waitForFrameLoad(frame);
+                doc = frame.contentDocument || frame.contentWindow.document;
+                win = frame.contentWindow;
+            });
+
+            it('renders all main guest fields', function() {
+                expect(doc.getElementById('main_name')).to.exist;
+                expect(doc.getElementById('arrival_date')).to.exist;
+                expect(doc.getElementById('departure_date')).to.exist;
+                expect(doc.getElementById('main_nationality')).to.exist;
+            });
+
+            it('shows conditional fields for non-UK nationality', function() {
+                const select = doc.getElementById('main_nationality');
+                select.value = 'USA';
+                select.dispatchEvent(new win.Event('change'));
+                const cond = doc.getElementById('main-guest-conditional');
+                expect(cond.classList.contains('active')).to.be.true;
+                expect(doc.getElementById('main_passport').required).to.be.true;
+                expect(doc.getElementById('main_next_destination').required).to.be.true;
+            });
+
+            it('hides conditional fields for UK nationality', function() {
+                const select = doc.getElementById('main_nationality');
+                select.value = 'UK';
+                select.dispatchEvent(new win.Event('change'));
+                const cond = doc.getElementById('main-guest-conditional');
+                expect(cond.classList.contains('active')).to.be.false;
+                expect(doc.getElementById('main_passport').required).to.be.false;
+                expect(doc.getElementById('main_next_destination').required).to.be.false;
+            });
+
+            it('renders additional guest sections when selected', function() {
+                const select = doc.getElementById('num_additional_guests');
+                select.value = '2';
+                select.dispatchEvent(new win.Event('change'));
+                const container = doc.getElementById('additional-guests-container');
+                expect(container.children.length).to.equal(2);
+                expect(doc.getElementById('guest_1_name')).to.exist;
+                expect(doc.getElementById('guest_2_name')).to.exist;
+            });
+
+            it('shows conditional fields for additional guest nationality', function() {
+                const select = doc.getElementById('num_additional_guests');
+                select.value = '1';
+                select.dispatchEvent(new win.Event('change'));
+                const guestSelect = doc.getElementById('guest_1_nationality');
+                guestSelect.value = 'USA';
+                guestSelect.dispatchEvent(new win.Event('change'));
+                const guestSection = doc.querySelector('[data-guest-number="1"]');
+                const cond = guestSection.querySelector('.conditional-field');
+                expect(cond.classList.contains('active')).to.be.true;
+                expect(doc.getElementById('guest_1_passport').required).to.be.true;
+                expect(doc.getElementById('guest_1_next_destination').required).to.be.true;
+            });
+
+            it('sets departure date min to arrival date', function() {
+                const arrival = doc.getElementById('arrival_date');
+                const departure = doc.getElementById('departure_date');
+                arrival.value = '2024-12-01';
+                arrival.dispatchEvent(new win.Event('change'));
+                expect(departure.min).to.equal('2024-12-01');
+            });
+
+            it('shows confirmation message on successful submit', function(done) {
+                // Mock google.script.run
+                win.google = {
+                    script: {
+                        run: {
+                            withSuccessHandler: function(fn) { this._success = fn; return this; },
+                            withFailureHandler: function(fn) { this._fail = fn; return this; },
+                            submitToSheet: function() { setTimeout(() => this._success(), 10); }
+                        }
+                    }
+                };
+                // Fill required fields
+                doc.getElementById('main_name').value = 'Test Name';
+                doc.getElementById('arrival_date').value = '2024-12-01';
+                doc.getElementById('departure_date').value = '2024-12-02';
+                doc.getElementById('main_nationality').value = 'UK';
+                doc.getElementById('guest-form').dispatchEvent(new win.Event('submit'));
+                setTimeout(() => {
+                    expect(doc.getElementById('confirmation-message').style.display).to.equal('block');
+                    expect(doc.getElementById('error-message').style.display).to.not.equal('block');
+                    done();
+                }, 20);
+            });
+
+            it('shows error message on failed submit', function(done) {
+                win.google = {
+                    script: {
+                        run: {
+                            withSuccessHandler: function(fn) { this._success = fn; return this; },
+                            withFailureHandler: function(fn) { this._fail = fn; return this; },
+                            submitToSheet: function() { setTimeout(() => this._fail(), 10); }
+                        }
+                    }
+                };
+                doc.getElementById('main_name').value = 'Test Name';
+                doc.getElementById('arrival_date').value = '2024-12-01';
+                doc.getElementById('departure_date').value = '2024-12-02';
+                doc.getElementById('main_nationality').value = 'UK';
+                doc.getElementById('guest-form').dispatchEvent(new win.Event('submit'));
+                setTimeout(() => {
+                    expect(doc.getElementById('error-message').style.display).to.equal('block');
+                    expect(doc.getElementById('confirmation-message').style.display).to.not.equal('block');
+                    done();
+                }, 20);
+            });
+        });
+
+        mocha.run();
+    </script>
+</body>
+</html>

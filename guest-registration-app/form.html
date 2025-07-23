@@ -35,7 +35,10 @@
     <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-2xl">
         <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8">
             <h1 class="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-6">Guest Registration Form</h1>
-            
+             <p>Dear Guest, under UK law, we are obliged to collect certain information regarding guests over the age of 16 staying in our cottages. Please complete this form before your arrival so we can hand over the keys and get you settled in your cottage as soon as you arrive.
+            All guests who are not British, Irish, or nationals of Commonwealth nations are required by law to supply additional information.
+            If you are from a UK or Commonwealth country do not change the nationality field on the form.
+            You can view our privacy policy here: Privacy Policy</p>
             <div id="confirmation-message" class="hidden bg-green-100 border-l-4 border-green-500 text-green-700 p-4 mb-6 rounded-md">
                 <p>Thank you! Your registration has been submitted.</p>
             </div>
@@ -196,45 +199,38 @@
 
                 for (let i = 1; i <= count; i++) {
                     const sectionHTML = `
-                        <div class="form-section border-t pt-6" data-guest-number="${i}">
-                            <h3 class="text-lg font-semibold text-gray-800 mb-4">Additional Guest ${i}</h3>
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <div class="md:col-span-2">
-                                    <label for="guest_${i}_name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
-                                    <input type="text" id="guest_${i}_name" name="guest_${i}_name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
-                                </div>
-                                <div class="md:col-span-2">
-                                    <label for="guest_${i}_nationality" class="block text-sm font-medium text-gray-700 mb-2">Nationality</label>
-                                    <select id="guest_${i}_nationality" name="guest_${i}_nationality" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition guest-nationality-select">
-                                        <option value="">-- Select Nationality --</option>
-                                        <option value="UK">UK</option>
-                                        <option value="USA">USA</option>
-                                        <option value="Canada">Canada</option>
-                                        <option value="Australia">Australia</option>
-                                        <option value="Other">Other</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="conditional-field">
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <div>
-                                        <label for="guest_${i}_passport" class="block text-sm font-medium text-gray-700 mb-2">Passport Number</label>
-                                        <input type="text" id="guest_${i}_passport" name="guest_${i}_passport" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
-                                    </div>
-                                    <div class="md:col-span-2">
-                                        <label for="guest_${i}_next_destination" class="block text-sm font-medium text-gray-700 mb-2">Next Destination Address</label>
-                                        <input type="text" id="guest_${i}_next_destination" name="guest_${i}_next_destination" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    `;
+        <div class="form-section border-t pt-6" data-guest-number="${i}">
+            <h3 class="text-lg font-semibold text-gray-800 mb-4">Additional Guest ${i}</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="md:col-span-2">
+                    <label for="guest_${i}_name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                    <input type="text" id="guest_${i}_name" name="guest_${i}_name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                </div>
+                <div class="md:col-span-2">
+                    <label for="guest_${i}_nationality" class="block text-sm font-medium text-gray-700 mb-2">Nationality</label>
+                    <input type="text" id="guest_${i}_nationality" name="guest_${i}_nationality" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" placeholder="Enter nationality">
+                </div>
+            </div>
+            <div class="conditional-field">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="guest_${i}_passport" class="block text-sm font-medium text-gray-700 mb-2">Passport Number</label>
+                        <input type="text" id="guest_${i}_passport" name="guest_${i}_passport" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                    </div>
+                    <div class="md:col-span-2">
+                        <label for="guest_${i}_next_destination" class="block text-sm font-medium text-gray-700 mb-2">Next Destination Address</label>
+                        <input type="text" id="guest_${i}_next_destination" name="guest_${i}_next_destination" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
                     additionalGuestsContainer.insertAdjacentHTML('beforeend', sectionHTML);
                 }
             });
 
-            additionalGuestsContainer.addEventListener('change', function(e) {
-                if (e.target && e.target.classList.contains('guest-nationality-select')) {
+            additionalGuestsContainer.addEventListener('input', function(e) {
+                if (e.target && e.target.name && e.target.name.startsWith('guest_') && e.target.name.endsWith('_nationality')) {
                     const guestSection = e.target.closest('.form-section');
                     const conditionalContainer = guestSection.querySelector('.conditional-field');
                     toggleConditionalFields(e.target, conditionalContainer);
